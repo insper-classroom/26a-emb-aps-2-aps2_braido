@@ -20,6 +20,11 @@ target_link_libraries(pico_emb PRIVATE
     pico_async_context_freertos
     FreeRTOS-Kernel-Heap4
     pico_stdlib
+    hardware_i2c       # ← faltava isso (hardware/i2c.h)
+    hardware_pwm       # ← hardware/pwm.h
+    hardware_adc       # ← hardware/adc.h
+    hardware_gpio
+    Fusion
     )
 # Set the nunber of cores to 1.
 # This defaults to 2 in FreeRTOSConfig_examples_common.h if not defined in here
